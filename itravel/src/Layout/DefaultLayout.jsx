@@ -17,8 +17,10 @@ export default function DefaultLayout() {
   if (isMobile) {
     return (
       <>
-        <Outlet />
-        <DockBar></DockBar>
+        <div className='bg-white'>
+          <Outlet />
+          <DockBar></DockBar>
+        </div>
       </>
     );
   }
@@ -27,8 +29,12 @@ export default function DefaultLayout() {
   }
   return (
     <>
-      <NavbarDesktop></NavbarDesktop>
-      <Outlet />
+      <div className='relative'>
+        <div className='mt-22'>
+          <Outlet></Outlet>
+        </div>
+        <NavbarDesktop></NavbarDesktop>
+      </div>
     </>
   );
 }
