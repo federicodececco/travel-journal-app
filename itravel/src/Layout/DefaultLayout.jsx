@@ -17,10 +17,8 @@ export default function DefaultLayout() {
   if (isMobile) {
     return (
       <>
-        <div className='bg-white'>
-          <Outlet />
-          <DockBar></DockBar>
-        </div>
+        <Outlet />
+        <DockBar></DockBar>
       </>
     );
   }

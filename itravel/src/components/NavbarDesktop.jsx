@@ -4,7 +4,9 @@ export default function NavbarDesktop() {
       <nav className=' fixed  top-3 left-4 right-4 mb-4'>
         <div className='navbar  bg-base-100/90 shadow-md  rounded-2xl'>
           <div className='flex-1'>
-            <a className='btn btn-ghost text-xl'>ITravel</a>
+            <a className='btn btn-ghost text-xl' href='/'>
+              ITravel
+            </a>
           </div>
           <div className='flex-3 gap-2'>
             <input
@@ -34,6 +36,11 @@ export default function NavbarDesktop() {
                 <li>
                   <a>
                     <i class='fa-solid fa-user'></i> Profilo
+                  </a>
+                </li>
+                <li>
+                  <a href='/viaggi'>
+                    <i class='fa-solid fa-road'></i> I miei Viaggi
                   </a>
                 </li>
                 <li>
