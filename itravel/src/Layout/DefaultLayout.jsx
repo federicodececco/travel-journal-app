@@ -26,11 +26,10 @@ export default function DefaultLayout() {
   }
   return (
     <>
-      <div className='relative'>
-        <div className='mt-24'>
-          <Outlet></Outlet>
-        </div>
+      <div className='relative bg-[#1e1e1e]'>
         <NavbarDesktop></NavbarDesktop>
+
+        <Outlet></Outlet>
       </div>
     </>
   );

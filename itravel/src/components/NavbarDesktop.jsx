@@ -1,7 +1,7 @@
 export default function NavbarDesktop() {
   return (
     <>
-      <nav className=' fixed  top-3 left-4 right-4 mb-4'>
+      <nav className=' fixed  top-3 left-4 right-4 mb-4 z-100'>
         <div className='navbar  bg-base-100/90 shadow-md  rounded-2xl'>
           <div className='flex-1'>
             <a className='btn btn-ghost text-xl' href='/'>
