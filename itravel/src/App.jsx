@@ -3,6 +3,7 @@ import './App.css';
 import DefaultLayout from './Layout/DefaultLayout';
 import HomePage from './pages/HomePage';
 import MyTravels from './pages/MyTravels';
+import NewPage from './pages/NewPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/viaggi' element={<MyTravels />}></Route>
+          <Route path='/page' element={<NewPage />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

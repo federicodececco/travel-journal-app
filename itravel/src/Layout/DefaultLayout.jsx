@@ -13,7 +13,6 @@ import NavbarDesktop from '../components/NavbarDesktop';
 export default function DefaultLayout() {
   const { isMobile, isTablet, isDesktop } = useBreakpoint();
 
-  /* mobile */
   if (isMobile) {
     return (
       <>
@@ -28,7 +27,7 @@ export default function DefaultLayout() {
   return (
     <>
       <div className='relative'>
-        <div className='mt-22'>
+        <div className='mt-24'>
           <Outlet></Outlet>
         </div>
         <NavbarDesktop></NavbarDesktop>
