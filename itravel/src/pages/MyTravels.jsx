@@ -9,7 +9,7 @@ export default function MyTravels() {
       {viaggi.map((elem) => {
         return (
           <div
-            onClick={() => navigate(`/details/${elem.id}`)}
+            onClick={() => navigate(`/travel/${elem.id}/page/1`)}
             className='card card-side bg-base-100 shadow-lg hover:cursor-pointer hover:bg-base-200'
           >
             <figure>
