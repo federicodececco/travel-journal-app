@@ -106,9 +106,9 @@ export default function Page() {
     >
       <div className='absolute inset-0 bg-[#1e1e1e] backdrop-blur-[0.5px] '></div>
 
-      <div className='relative z-10 min-h-screen'>
+      <div className='relative z-10 min-h-screen pb-10'>
         {!isMobile && (
-          <div className='flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm fixed top-0 w-full '>
+          <div className='flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm fixed top-0 w-full z-100'>
             <button
               onClick={() => navigate(`/details/${travelId}`)}
               className='text-white hover:text-gray-300 transition-colors'
