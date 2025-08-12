@@ -103,10 +103,20 @@ export default function TravelDetail() {
           onClick={() => {
             navigate('/travel');
           }}
-          className='absolute top-4 left-4 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all z-10'
+          className='fixed top-4 left-4 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all z-10'
         >
           <i className='fa-solid fa-arrow-left'></i>
         </button>
+        {isMobile && (
+          <button
+            onClick={() => {
+              navigate(`/add/${travelId}/new-page`);
+            }}
+            className='fixed top-4 right-4 bg-black/50 text-white p-3 rounded-full hover:bg-black/70 transition-all z-10'
+          >
+            <i className='fa-solid fa-plus'></i>
+          </button>
+        )}
 
         <div className='absolute bottom-0 left-0 right-0 p-6 text-white'>
           <h1 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-2'>
@@ -199,9 +209,9 @@ export default function TravelDetail() {
           </div>
         </div>
 
-        <div className='text-center '>
+        <div className='text-center pb-15 md:pb-0 '>
           <button
-            onClick={() => navigate('/page/add')}
+            onClick={() => navigate(`/add/${travelId}/new-page`)}
             className='bg-[#e6d3b3] hover:bg-[#d4c49a] text-gray-800 font-bold py-4 px-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105'
           >
             <i className='fa-solid fa-plus mr-2'></i>

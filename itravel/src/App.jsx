@@ -15,7 +15,7 @@ function App() {
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<HomePage />}></Route>
           <Route path='/travel' element={<MyTravels />}></Route>
-          <Route path='/page/add' element={<NewPage />}></Route>
+          <Route path='add/:travelId/new-page' element={<NewPage />}></Route>
         </Route>
         <Route element={<TravelDetailLayout />}>
           <Route path='/details/:travelId' element={<TravelDetail />}></Route>

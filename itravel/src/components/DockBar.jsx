@@ -28,7 +28,7 @@ export default function DockBar() {
           className={isActive == 2 && 'dock-active'}
           onClick={() => {
             setActive(2);
-            navigate('/viaggi');
+            navigate('/travel');
           }}
         >
           <i class='fa-solid fa-road'></i>

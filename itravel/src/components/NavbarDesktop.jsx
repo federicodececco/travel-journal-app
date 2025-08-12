@@ -39,7 +39,7 @@ export default function NavbarDesktop() {
                   </a>
                 </li>
                 <li>
-                  <a href='/viaggi'>
+                  <a href='/travel'>
                     <i class='fa-solid fa-road'></i> I miei Viaggi
                   </a>
                 </li>

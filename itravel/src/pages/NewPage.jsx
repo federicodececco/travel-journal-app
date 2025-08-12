@@ -1,9 +1,11 @@
 import { useState } from 'react';
-
+import { useNavigate, useParams } from 'react-router';
 import { useBreakpoint } from '../hooks/useScreenSize';
 
 export default function NewPage() {
+  const navigate = useNavigate();
   const { isMobile, isTablet, isDesktop } = useBreakpoint();
+  const { travelId } = useParams();
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [mainImage, setMainImage] = useState(null);
@@ -26,10 +28,7 @@ export default function NewPage() {
   };
 
   const handleCancel = () => {
-    setTitle('');
-    setDescription('');
-    setMainImage(null);
-    setAdditionalImages([null, null, null, null, null]);
+    navigate(`/details/${travelId}`);
   };
 
   const handleSubmit = (e) => {
