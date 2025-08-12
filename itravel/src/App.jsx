@@ -5,6 +5,8 @@ import HomePage from './pages/HomePage';
 import MyTravels from './pages/MyTravels';
 import NewPage from './pages/NewPage';
 import Page from './pages/Page';
+import TravelDetail from './pages/TravelDetail';
+import TravelDetailLayout from './Layout/TravelDetailLayout';
 
 function App() {
   return (
@@ -12,11 +14,13 @@ function App() {
       <Routes>
         <Route element={<DefaultLayout />}>
           <Route path='/' element={<HomePage />}></Route>
-          <Route path='/viaggi' element={<MyTravels />}></Route>
+          <Route path='/travel' element={<MyTravels />}></Route>
           <Route path='/page/add' element={<NewPage />}></Route>
-          <Route path='/details/:travelId'></Route>
-          {/* travel details */}
         </Route>
+        <Route element={<TravelDetailLayout />}>
+          <Route path='/details/:travelId' element={<TravelDetail />}></Route>
+        </Route>
+
         <Route path='/travel/:travelId/page/:pageId' element={<Page />}></Route>
       </Routes>
     </BrowserRouter>

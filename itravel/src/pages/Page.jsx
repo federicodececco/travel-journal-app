@@ -98,32 +98,26 @@ export default function Page() {
   return (
     <div
       className='min-h-screen bg-cover bg-center bg-fixed relative'
-      style={{
-        backgroundImage:
-          'url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAGQAZADASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigD/2Q==)',
-      }}
       {...(!showImageModal ? pageSwipeHandlers : {})}
     >
       <div className='absolute inset-0 bg-[#1e1e1e] backdrop-blur-[0.5px] '></div>
 
-      <div className='relative z-10 min-h-screen pb-10'>
-        {!isMobile && (
-          <div className='flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm fixed top-0 w-full z-100'>
-            <button
-              onClick={() => navigate(`/details/${travelId}`)}
-              className='text-white hover:text-gray-300 transition-colors'
-            >
-              <i className='fa-solid fa-arrow-left text-xl'></i>
-            </button>
-            <div className='text-white text-center'>
-              <h1 className='text-lg font-semibold'>Pagina {pageData.id}</h1>
-              <p className='text-sm opacity-80'>
-                {navigationData.totalPages} pagine
-              </p>
-            </div>
-            <div className='w-6'></div>
+      <div className='relative z-10 min-h-screen pb-10 md:pt-0 pt-15 '>
+        <div className='flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm fixed top-0 w-full z-100'>
+          <button
+            onClick={() => navigate(`/details/${travelId}`)}
+            className='text-white hover:text-gray-300 transition-colors'
+          >
+            <i className='fa-solid fa-arrow-left text-xl'></i>
+          </button>
+          <div className='text-white text-center'>
+            <h1 className='text-lg font-semibold'>Pagina {pageData.id}</h1>
+            <p className='text-sm opacity-80'>
+              {navigationData.totalPages} pagine
+            </p>
           </div>
-        )}
+          <div className='w-6'></div>
+        </div>
 
         <div className='px-4 py-6 max-w-4xl mx-auto md:pt-20 md:mt-4'>
           <div className='bg-[url(/test-bg.jpeg)] backdrop-blur-md rounded-2xl shadow-xl overflow-hidden mb-6'>
